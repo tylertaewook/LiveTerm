@@ -1,46 +1,24 @@
 import config from '../../../config.json';
 
 const sumfetch = async (args: string[]): Promise<string> => {
-  if (config.ascii === 'cveinnt') {
-    return `                                                  
-             @@@@@@@@@@@@@                   sumfetch: summary display
-        @@@@               @@@@             -----------
-      @@                       @@            ABOUT
-    @@                           @@          ${config.name}
-  @@                               @@       ﰩ ${config.ps1_hostname}
- @@                         @@@     @@       <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-@@        @@@                        @@     爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-@@                                   @@     -----------
-@@             .@@@@@@@@@@.          @@      CONTACT 
- @@           @@          @@        @@       <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-  @@           @@        @@        @@        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   @@             @@@@@@          @@         <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
-     @@@                        @@@         -----------
-        @@@                  @@@ @@          DONATE 
-         @|  @@@@@@@@@@@@@@@@   @@           <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-         @|                      @@          <u><a href="${config.donate_urls.patreon}" target="_blank">${config.donate_urls.patreon}</a></u>
-
+  return `
+########################################     sumfetch
+GBBBBBBBBB#@@@#BBB#@@@BBBBBG&@@@#BBBBBBB    -----------
+          ^@@@!   ~@@@^    ~&@@Y             ABOUT
+          ^@@@!   ~@@@^   7@@@J              ${config.name}
+          ^@@@!   ~@@@^  ?@@@7               <u><a href="${config.resume_url}" target="_blank">resume</a></u>
+          ^@@@!   ~@@@: Y@@&!               爵 <u><a href="https://tylertaewook.com" target="_blank">main_website</a></u>
+          ^@@@!   ~@@@^5@@@5                -----------
+          ^@@@!   ~@@@B@@@@@~                CONTACT 
+          ^@@@!   ~@@@@@PP@@B                <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
+          ^@@@!   ~@@@@P .&@@J               <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+          ^@@@!   ~@@@Y   7@@@^              <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
+          ^@@@!   ~@@@:    P@@G             -----------
+          ^@@@!   ~@@@^    :&@@?             PROJECTS
+          ^@@@!   ~@@@^     ?@@&^           ⚪ <u><a href="https://tylertaewook.com/projects/scraft" target="_blank">${config.social.github}/scraft</a></u>
+          ^@@@!   ~@@@^      G@@G           ⚪ <u><a href="https://tylertaewook.com/projects/orbitron" target="_blank">${config.social.github}/orbitron</a></u>
+          ^@@@!   ~@@@:      ^&@@7          ⚪ <u><a href="https://tylertaewook.com/projects/fashion-hiernet" target="_blank">${config.social.github}/fashion-hiernet</a></u>
 `;
-  } else {
-    return `
-           ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄                  sumfetch
-        ▄▓▓▀ ▄▓▓▀▓▓▓▀▓▓▄ ▀▀▓▓▄              -----------
-      ▓▓▀  ▄▓▀   ▐▓▓  ▀▓▓    ▓▓▄             ABOUT
-    ▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            ${config.name}
-   ▓▓     ▓▓▓    ▐▓▓    ▐▓▓     ▓▓           <u><a href="${config.resume_url}" target="_blank">resume</a></u>
-▐▓▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▓       爵 <u><a href="${config.repo}" target="_blank">Github repo</a></u>
-▐▓                                 ▐▓       -----------
-▐▓        > L I V E T E R M        ▐▓        CONTACT 
-▐▓                                 ▐▓        <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
-▐▓▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▓        <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
-   ▓▓      ▐▓▓    ▓▓    ▐▓▓     ▓▓           <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u>
-    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓           -----------
-      ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀             DONATE 
-        ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀                <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-            ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                   <u><a href="${config.donate_urls.patreon}" target="_blank">${config.donate_urls.patreon}</a></u>
-
-`;
-  }
 };
 
 export default sumfetch;

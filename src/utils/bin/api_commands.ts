@@ -21,9 +21,10 @@ export const quote = async (args: string[]): Promise<string> => {
 };
 
 export const readme = async (args: string[]): Promise<string> => {
-  const readme = await getReadme();
   return `Opening GitHub README...\n
-  ${readme}`;
+My name is Tyler, a first-year undergrad at Columbia SEAS pursuing towards a B.S. in Computer Science.
+My general interest revolves around intertwining Machine Learning and Web Development in which I spark my passion working on ML Web apps such as @scraft-ai.
+I'm curently exploring fields like text-mining, arduino-robotics, computer-vision, and reinforcement-learning until I settle onto a single one that I would like to dive deeper.`;
 };
 
 export const weather = async (args: string[]): Promise<string> => {
