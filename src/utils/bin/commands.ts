@@ -107,12 +107,10 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `bin
-usr
-home
-lib
-mnt
-opt`;
+  return `bin    etc         initrd.img.old  lost+found  proc  snap  usr
+boot   home        lib             media       root  srv   var
+cdrom  home1       lib32           mnt         run   sys   vmlinuz
+dev    initrd.img  lib64           opt         sbin  tmp   vmlinuz.old`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
@@ -145,12 +143,16 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
-export const sysinfo = async (args?: string[]): Promise<string> => {
-  return `  System load:  0.0                Processes:           246
-  Usage of /:   71.5% of 48.96GB   Users logged in:     1
-  Memory usage: 6%                 IP address for eth0: 192.168.1.6
-  Swap usage:   0%`;
+export const exit = async (args?: string[]) => {
+  window.close();
 };
+
+// export const sysinfo = async (args?: string[]): Promise<string> => {
+//   return `  System load:  0.0                Processes:           246
+//   Usage of /:   71.5% of 48.96GB   Users logged in:     1
+//   Memory usage: 6%                 IP address for eth0: 192.168.1.6
+//   Swap usage:   0%`;
+// };
 
 // Banner
 export const banner = (args?: string[]): string => {
